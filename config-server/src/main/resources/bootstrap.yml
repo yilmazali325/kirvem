@@ -1,0 +1,19 @@
+---
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: development
+  security:
+    user:
+      name: ${CONFIG_SERVER_USERNAME:admin}
+      password: ${CONFIG_SERVER_PASSWORD:password}
+  cloud:
+    config:
+      server:
+        bootstrap: true
+        git:
+          uri: https://github.com/umur/config-server.git
+          username: ${CONFIG_GIT_USERNAME:umur}
+          password: ${CONFIG_GIT_PASSWORD:PASSWORD}
+

@@ -1,0 +1,20 @@
+#zuul:
+#  routes:
+#    user:
+#      path: /user/**
+#      url: http://localhost:9091/api/user
+
+
+#spring:
+#  application:
+#    name: zuul-service
+#server:
+#  port: 7070
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+#    fetch-registry: true
+#  instance:
+#    preferIpAddress: true
+
